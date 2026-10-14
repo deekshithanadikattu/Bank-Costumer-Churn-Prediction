@@ -1,0 +1,206 @@
+{
+  "overall_churn_rate": 0.2037,
+  "segments": [
+    {
+      "dimension": "Country",
+      "segment": "France",
+      "customers": 5014,
+      "churn_rate": 0.1615
+    },
+    {
+      "dimension": "Country",
+      "segment": "Germany",
+      "customers": 2509,
+      "churn_rate": 0.3244
+    },
+    {
+      "dimension": "Country",
+      "segment": "Spain",
+      "customers": 2477,
+      "churn_rate": 0.1667
+    },
+    {
+      "dimension": "Gender",
+      "segment": "Female",
+      "customers": 4543,
+      "churn_rate": 0.2507
+    },
+    {
+      "dimension": "Gender",
+      "segment": "Male",
+      "customers": 5457,
+      "churn_rate": 0.1646
+    },
+    {
+      "dimension": "Age",
+      "segment": "18-29",
+      "customers": 1641,
+      "churn_rate": 0.0756
+    },
+    {
+      "dimension": "Age",
+      "segment": "30-39",
+      "customers": 4346,
+      "churn_rate": 0.1088
+    },
+    {
+      "dimension": "Age",
+      "segment": "40-49",
+      "customers": 2618,
+      "churn_rate": 0.3079
+    },
+    {
+      "dimension": "Age",
+      "segment": "50-59",
+      "customers": 869,
+      "churn_rate": 0.5604
+    },
+    {
+      "dimension": "Age",
+      "segment": "60+",
+      "customers": 526,
+      "churn_rate": 0.2795
+    },
+    {
+      "dimension": "Products",
+      "segment": "1 product(s)",
+      "customers": 5084,
+      "churn_rate": 0.2771
+    },
+    {
+      "dimension": "Products",
+      "segment": "2 product(s)",
+      "customers": 4590,
+      "churn_rate": 0.0758
+    },
+    {
+      "dimension": "Products",
+      "segment": "3 product(s)",
+      "customers": 266,
+      "churn_rate": 0.8271
+    },
+    {
+      "dimension": "Products",
+      "segment": "4 product(s)",
+      "customers": 60,
+      "churn_rate": 1.0
+    },
+    {
+      "dimension": "Activity",
+      "segment": "Active",
+      "customers": 5151,
+      "churn_rate": 0.1427
+    },
+    {
+      "dimension": "Activity",
+      "segment": "Inactive",
+      "customers": 4849,
+      "churn_rate": 0.2685
+    },
+    {
+      "dimension": "Balance",
+      "segment": "Has balance",
+      "customers": 6383,
+      "churn_rate": 0.2408
+    },
+    {
+      "dimension": "Balance",
+      "segment": "Zero balance",
+      "customers": 3617,
+      "churn_rate": 0.1382
+    }
+  ],
+  "zero_balance_share": {
+    "Germany": 0.0,
+    "France_and_Spain": 0.4828
+  },
+  "cross_validation": {
+    "Logistic Regression": {
+      "pr_auc_mean": 0.4567,
+      "pr_auc_std": 0.0285,
+      "roc_auc_mean": 0.7662,
+      "recall_mean": 0.6834,
+      "precision_mean": 0.3794
+    },
+    "Random Forest": {
+      "pr_auc_mean": 0.6773,
+      "pr_auc_std": 0.0215,
+      "roc_auc_mean": 0.8593,
+      "recall_mean": 0.6356,
+      "precision_mean": 0.614
+    },
+    "XGBoost": {
+      "pr_auc_mean": 0.6998,
+      "pr_auc_std": 0.0245,
+      "roc_auc_mean": 0.8651,
+      "recall_mean": 0.7239,
+      "precision_mean": 0.5277
+    }
+  },
+  "test": {
+    "model": "XGBoost",
+    "customers": 2000,
+    "churners": 407,
+    "accuracy": 0.8095,
+    "always_stays_baseline_accuracy": 0.7965,
+    "recall": 0.7469,
+    "precision": 0.5223,
+    "f1": 0.6148,
+    "roc_auc": 0.8656,
+    "pr_auc": 0.7154,
+    "confusion_matrix": {
+      "tn": 1315,
+      "fp": 278,
+      "fn": 103,
+      "tp": 304
+    },
+    "top_20pct": {
+      "customers_contacted": 400,
+      "share_of_churners_captured": 0.6265,
+      "churn_rate_in_group": 0.6375,
+      "lift_vs_random": 3.13
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "products_number",
+      "importance": 0.2715
+    },
+    {
+      "feature": "age",
+      "importance": 0.2535
+    },
+    {
+      "feature": "active_member",
+      "importance": 0.0904
+    },
+    {
+      "feature": "balance",
+      "importance": 0.0654
+    },
+    {
+      "feature": "country",
+      "importance": 0.0502
+    },
+    {
+      "feature": "gender",
+      "importance": 0.0111
+    },
+    {
+      "feature": "tenure",
+      "importance": 0.0045
+    },
+    {
+      "feature": "credit_score",
+      "importance": 0.0015
+    },
+    {
+      "feature": "credit_card",
+      "importance": -0.0
+    },
+    {
+      "feature": "estimated_salary",
+      "importance": -0.0026
+    }
+  ]
+}
